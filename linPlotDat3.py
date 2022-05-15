@@ -132,8 +132,8 @@ def lines_from_points(points):
 
 numTags = 4
 
-minTime = 35 # Start Time
-maxTime = 50# End Time
+minTime = 15 # Start Time
+maxTime = 30# End Time
 
 
 COL = sns.color_palette('colorblind',n_colors = numTags) # Create a list of colors 
