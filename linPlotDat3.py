@@ -170,7 +170,7 @@ for i in range(numTags):
     for j in range(3):
         plt.subplot(4,1,j+1)
         plt.title('Time vs {} position'.format(labels[j]))
-        plt.plot(Tf[i][TfStartIndx[i]:TfStopIndx[i]], Tags[i][j][TfStartIndx[i]:TfStopIndx[i]],color = COL[i],linestyle = 'dotted',label = 'Module {}'.format(i))
+        plt.plot(Tf[i][TfStartIndx[i]:TfStopIndx[i]], Tags[i][j][TfStartIndx[i]:TfStopIndx[i]],color = COL[i],linestyle = 'dotted',label = 'Module {} $R^2$ = {:.3}'.format(i,fitParams[i,2,j]**2))
 
         plt.plot(Tf[i][TfStartIndx[i]:TfStopIndx[i]], fits[i][j][TfStartIndx[i]:TfStopIndx[i]],'-k')
         plt.ylabel(labels[j]+'[mm]')
@@ -186,8 +186,9 @@ plt.subplots_adjust(top=0.926,
                     bottom=0.121,
                     left=0.066,
                     right=0.977,
-                    hspace=0.835,
-                    wspace=0.2)
+                    hspace=0.45,
+                    wspace=0.21
+                    )
 
 
 plt.show()
