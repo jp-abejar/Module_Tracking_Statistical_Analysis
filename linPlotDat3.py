@@ -146,8 +146,8 @@ Tf = [] # For appending tagDat[0]
 
 for i in range(numTags):
     
-    fi = open("./GcodePosFiles/TXYZ_%003i.dat"%i,"r")
-    fiPos = open("./DetectorPosDataFiles/Position_Time_LOG%0003i.dat"%i,"r")
+    fi = open("./DetectorPosDataFiles/TXYZ_%003i.dat"%i,"r")
+    fiPos = open("./GcodePosFiles/Position_Time_LOG%0003i.dat"%i,"r")
     
     
     gcd.append( ParseGcodeData(fiPos) )
